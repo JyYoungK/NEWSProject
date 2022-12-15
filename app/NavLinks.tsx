@@ -11,7 +11,7 @@ function NavLinks() {
   };
 
   return (
-    <nav className="grid grid-cols-4 text-xs gap-4 pb-10 max-w-6xl mx-auto border-b">
+    <nav className="mx-auto grid max-w-6xl grid-cols-4 gap-4 border-b pb-10 text-xs">
       {categories.map((category) => (
         <NavLink
           key={category}
