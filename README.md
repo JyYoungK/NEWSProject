@@ -26,11 +26,10 @@ ex)
 
 - VITE_RAPID_API_KEY = KJwZZIJSFimshuivMSVGaiYzkRomp15f2vKjsnK4bKzuUzVLzA
 
-## My note
+## NextJS13 + Tailwind Note
 
 1. Everything under `pages` folder are client component
 2. To create a server component
-
 3. Create an `app` folder in the root folder. So Everything under `app` folder are server component
 4. Go to next.config.js and add this code right under `reactStrictMode: true,`
 
@@ -42,8 +41,7 @@ ex)
 
 5. To convert it to NextJS13 format, create page.jsx or page.tsx under app folder which will be the new home directory
 6. Since index.jsx or index.tsx inside pages folder is also a home directory, remove it
-7. **DO NOT** to use <html> in children page.tsx. It will cause hydration error! Use <main> or <> instead
-
+7. **DO NOT** to use `<html>` in children page.tsx. It will cause hydration error! Use `<main>` or `<>` instead
 8. Add import "../styles/globals.css"; inside the layout.jsx or layout.tsx inside app folder to import tailwind
 9. To use click, handler or a hook or any interactive element that requires binding to an element you need to switch to a client component.
    To make a server component into a client component under app, add `'use client'` on top of the server code (aka any file in app folder).
