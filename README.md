@@ -42,16 +42,18 @@ ex)
 
 5. To convert it to NextJS13 format, create page.jsx or page.tsx under app folder which will be the new home directory
 6. Since index.jsx or index.tsx inside pages folder is also a home directory, remove it
-7. Add import "../styles/globals.css"; inside the layout.jsx or layout.tsx inside app folder to import tailwind
-8. To use click, handler or a hook or any interactive element that requires binding to an element you need to switch to a client component.
+7. **DO NOT** to use <html> in children page.tsx. It will cause hydration error! Use <main> or <> instead
+
+8. Add import "../styles/globals.css"; inside the layout.jsx or layout.tsx inside app folder to import tailwind
+9. To use click, handler or a hook or any interactive element that requires binding to an element you need to switch to a client component.
    To make a server component into a client component under app, add `'use client'` on top of the server code (aka any file in app folder).
-9. To navigate, use next/link ex)
+10. To navigate, use next/link ex)
 
 ```js
 <Link href={`/todos/${todo.id}`}>
 ```
 
-10. API Fetch Techniques
+11. API Fetch Techniques
 
 - To force the server-side rendering method you put
   await fetch ( url, {cache:'no-cache'})
@@ -66,8 +68,7 @@ await fetch ( url, {next: revalidate: 60})
 60 represents seconds. can be any number. This method is good if you are fetching a data with many different id
 All pages will be cached and stored for 60 seconds to load faster. After 60 seconds it will server side render with a new version and remove all cache. 10. General Other Tip:
 
-11. If you want to find an element type using typescript, use `(e=> data)` and hover on e to find out.
-12. **You don't want to add <html> in children page.tsx. It will cause hydration error! Use <main> instead**
+12. If you want to find an element type using typescript, use `(e=> data)` and hover on e to find out.
 13. Reserved components to use.
     loading.tsx - for loading
     not-found.tsx - not invalid page
