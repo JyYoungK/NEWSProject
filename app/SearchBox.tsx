@@ -11,7 +11,7 @@ function SearchBox() {
     e.preventDefault();
     if (!input) return; // do nothing if input is empty
 
-    router.push(`/search?term=${input}}`);
+    router.push(`/search?term=${input}`);
   };
 
   return (

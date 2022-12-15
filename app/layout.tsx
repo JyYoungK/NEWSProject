@@ -1,4 +1,4 @@
-import "../styles/globals.css";
+import "./globals.css";
 import Header from "./Header";
 
 export default function RootLayout({
@@ -10,10 +10,9 @@ export default function RootLayout({
     <html lang="en">
       {}
       <head />
-      <body>
-        {" "}
+      <body className="bg-gray-200 transition-all duration-700 dark:bg-zinc-900">
         <Header />
-        {children}
+        <div className="mx-auto max-w-6xl">{children}</div>
       </body>
     </html>
   );
