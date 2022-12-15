@@ -1,27 +1,45 @@
-# Next.js + Tailwind CSS Example
+# NEWS Project
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.2)](https://tailwindcss.com/blog/tailwindcss-v3-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+## My note
 
-## Deploy your own
+- Everything under `pages` folder are client component
+- To create a server component
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+1. Create an `app` folder in the root folder
+2. Go to next.config.js and add this code right under `reactStrictMode: true,`
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
+```
+  experimental: {
+    appDir: true
+  }
 ```
 
-```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
+3. To convert it to NextJS13 format, create page.jsx or page.tsx under app folder which will be the new home directory
+4. Since index.jsx or index.tsx inside pages folder is also a home directory, remove it
+5. Add import "../styles/globals.css"; inside the layout.jsx or layout.tsx inside app folder to import tailwind
 
-```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
-```
+(Note: This website does not have the paid API key. Some components are limited)
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+Demo URL: https://spyproject.netlify.app/
+
+## Main Stack - M.E.R.N
+
+### Frontend
+
+- React as framework
+- Dynamic Data
+- Typescript
+- GraphQL
+- React Router for navigation
+- Tailwind/MUI for Design and CSS
+
+### Generate Full Working Website
+
+- Create `.env.local` file inside client
+- Fill in the followings
+- VITE_RAPID_API_KEY = https://rapidapi.com/tipsters/api/shazam-core/ <-- Go to this link and Sign Up, then you should see X-RapidAPI-Key inside Code Snippets. Copy it without the ""
+- VITE_UNSPLASH_ACCESS_KEY = https://unsplash.com/@developer/ <-- Go to this link Sign Up, then create a project and they will give you API Key. Copy it without the ""
+
+ex)
+
+- VITE_RAPID_API_KEY = KJwZZIJSFimshuivMSVGaiYzkRomp15f2vKjsnK4bKzuUzVLzA
