@@ -4,9 +4,9 @@ type Article = {
   country: string;
   description: string;
   image: string | null;
-  langauge: string;
+  language: string;
   published_at: string;
-  soruce: string;
+  source: string;
   title: string;
   url: string;
 };

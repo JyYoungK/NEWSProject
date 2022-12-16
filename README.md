@@ -22,6 +22,12 @@ Demo URL: https://spyproject.netlify.app/
 - VITE_RAPID_API_KEY = https://rapidapi.com/tipsters/api/shazam-core/ <-- Go to this link and Sign Up, then you should see X-RapidAPI-Key inside Code Snippets. Copy it without the ""
 - VITE_UNSPLASH_ACCESS_KEY = https://unsplash.com/@developer/ <-- Go to this link Sign Up, then create a project and they will give you API Key. Copy it without the ""
 
+### Check if APIKey is working correctly
+
+- Open powershell and type `stepzen start`
+- It will ask how you want to continue. Choose `Log in via stepzen.com`
+- Use your Stepzen Admin Key and it will give you GraphiQL link that looks like `http://localhost:5001/api/...`
+
 ex)
 
 - VITE_RAPID_API_KEY = KJwZZIJSFimshuivMSVGaiYzkRomp15f2vKjsnK4bKzuUzVLzA

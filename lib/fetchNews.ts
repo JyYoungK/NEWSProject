@@ -62,13 +62,11 @@ const fetchNews = async (
       }),
     }
   );
-  console.log("Data", category, keywords);
 
   const newsResponse = await res.json();
   //Sort function by images vs not image present
   const news = sortNewsByImage(newsResponse?.data?.myQuery);
   return news;
-  //Fetch function with Next.js 13 caching
 };
 
 export default fetchNews;
