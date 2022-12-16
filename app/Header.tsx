@@ -19,6 +19,10 @@ function Header() {
   var dd = String(today.getDate()).padStart(2, "0");
   var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
   var yyyy = today.getFullYear();
+
+  let beginning = new Date(`1/1/${yyyy}`);
+  let difference = today.getTime() - beginning.getTime();
+  let totalDays = Math.ceil(difference / (1000 * 60 * 60 * 24));
   return (
     <header>
       <hr className="my-4 h-1 border-0 bg-black dark:bg-[#3A160E]" />
@@ -56,7 +60,7 @@ function Header() {
       </div>
       <div className="py-auto mt-4 grid grid-cols-3 border-t-2 border-black dark:border-[#3A160E] dark:text-orange-500">
         <div className="pl-2 font-mono text-sm font-bold md:text-lg ">
-          Vol.{yyyy % 1000} • No.{parseInt(mm) + parseInt(dd)}
+          Vol.{yyyy % 1000} • No.{totalDays}
         </div>
         <div className="flex justify-center font-mono text-sm font-bold md:text-lg">
           {days[day]},{mm},{dd},{yyyy}
