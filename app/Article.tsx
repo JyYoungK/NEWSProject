@@ -1,10 +1,13 @@
+import LiveTimeStamp from "./LiveTimestamp";
+import ReadMoreButton from "./ReadMoreButton";
+
 type Props = {
   article: Article;
 };
 
 function Article({ article }: Props) {
   return (
-    <article className="flex flex-col rounded-lg bg-slate-100 shadow-sm transition-all duration-200 ease-out hover:scale-105 hover:bg-slate-200 hover:shadow-lg dark:bg-slate-800">
+    <article className="flex flex-col rounded-lg bg-slate-100 shadow-lg transition-all duration-200 ease-out hover:scale-105 hover:bg-slate-200 hover:shadow-xl dark:bg-slate-800">
       {article.image && (
         <img
           src={article.image}
@@ -21,11 +24,14 @@ function Article({ article }: Props) {
             <p className="text-xs line-clamp-3">{article.description}</p>
           </section>
 
-          <footer className="space-x-l ml-auto flex pt-5 text-right text-xs italic text-gray-400">
-            <p>{article.source}</p>
-            <p>{article.published_at}</p>
+          <footer className="flex space-x-1 pt-5 text-xs italic text-gray-400">
+            <p className="justify-start">{article.source.slice(0, 35)} • </p>
+            <p className="justify-end">
+              <LiveTimeStamp time={article.published_at} />
+            </p>
           </footer>
         </div>
+        <ReadMoreButton article={article} />
       </div>
     </article>
   );
