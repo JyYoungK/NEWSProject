@@ -10,4 +10,18 @@
   .headerTitle {
     @apply px-10 pt-5 font-serif text-4xl capitalize underline decoration-orange-400 decoration-double decoration-2 underline-offset-4;
   }
+
+  .NEffect {
+    @apply flex transform items-center justify-center transition duration-500 hover:scale-150 hover:bg-red-600;
+  }
+}
+
+@font-face {
+  font-family: "anglicantext";
+  src: url("../public/fonts/anglicantext.regular.ttf");
+}
+
+@font-face {
+  font-family: "Old English Five";
+  src: url("../public/fonts/OldEnglishFive.ttf");
 }

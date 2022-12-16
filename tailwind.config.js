@@ -7,7 +7,22 @@ module.exports = {
   ],
   darkMode: "class",
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        "spin-slow": "spin 3s linear infinite",
+      },
+      fontFamily: {
+        oldEnglish: ["Old English Five", "regular"],
+        anglican: ["AnglicanText", "regular"],
+      },
+
+      keyframes: {
+        shine: {
+          "100%": { left: "125%" },
+        },
+      },
+    },
   },
+
   plugins: [require("@tailwindcss/line-clamp")],
 };

@@ -9,9 +9,26 @@ function Header() {
     <header>
       <div className="grid grid-cols-3 items-center p-10">
         <Bars3Icon className="h-8 w-8 cursor-pointer" />
-        <Link href="/" prefetch={false}>
-          <h1 className="text-center font-serif text-4xl"> NEWS</h1>
-        </Link>
+        <div className="flex items-center justify-center ">
+          <div className=" Five flex transform items-center justify-center text-6xl transition duration-500 hover:scale-150">
+            {" "}
+            {/* <Link href="/" prefetch={false}> */}
+            <h1 className="text-center"> N</h1>
+            {/* </Link> */}
+          </div>
+          <div className=" flex transform items-center justify-center  text-6xl transition duration-500 hover:scale-150">
+            <h1 className="text-center"> E</h1>
+            {/* <h1 className="text-center font-serif text-4xl"> EWS</h1> */}
+          </div>
+          <div className=" flex transform items-center justify-center text-6xl transition duration-500 hover:scale-150">
+            <h1 className="text-center"> W</h1>
+            {/* <h1 className="text-center font-serif text-4xl"> EWS</h1> */}
+          </div>
+          <div className=" flex transform items-center justify-center  text-6xl transition duration-500 hover:scale-150">
+            <h1 className="text-center"> S</h1>
+            {/* <h1 className="text-center font-serif text-4xl"> EWS</h1> */}
+          </div>
+        </div>
 
         <div className="flex items-center justify-end space-x-2">
           <DarkModeButton />

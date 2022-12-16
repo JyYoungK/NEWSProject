@@ -1,13 +1,33 @@
 import fetchNews from "../../../lib/fetchNews";
 import NewsList from "../../NewsList";
 import { categories } from "../../../constants";
+import dummyNews from "../../../dummyData/dummyNews.json";
+import dummyBusiness from "../../../dummyData/dummyBusiness.json";
+import dummyEntertainment from "../../../dummyData/dummyEntertainment.json";
+import dummyHealth from "../../../dummyData/dummyHealth.json";
+import dummyScience from "../../../dummyData/dummyScience.json";
+import dummySports from "../../../dummyData/dummySports.json";
+import dummyTechnology from "../../../dummyData/dummyTechnology.json";
 
 type Props = {
   params: { category: Category };
 };
 
 async function NewsCategory({ params: { category } }: Props) {
-  const news: NewsResponse = await fetchNews(category);
+  let news: NewsResponse = dummyNews;
+  if (category === "business") {
+    news = dummyBusiness || (await fetchNews(category));
+  } else if (category === "entertainment") {
+    news = dummyEntertainment || (await fetchNews(category));
+  } else if (category === "health") {
+    news = dummyHealth || (await fetchNews(category));
+  } else if (category === "science") {
+    news = dummyScience || (await fetchNews(category));
+  } else if (category === "sports") {
+    news = dummySports || (await fetchNews(category));
+  } else {
+    news = dummyTechnology || (await fetchNews(category));
+  }
 
   return (
     <div>

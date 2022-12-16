@@ -9,7 +9,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-gray-200 transition-all duration-700 dark:bg-zinc-900">
+      <head>
+        {/* <link
+          href="https://fonts.cdnfonts.com/css/old-english-five"
+          rel="stylesheet"
+        /> */}
+      </head>
+
+      <body className="bg-gray-200 font-oldEnglish transition-all duration-700 dark:bg-zinc-900">
         <Providers>
           <Header />
           <div className="mx-auto max-w-6xl">{children}</div>
