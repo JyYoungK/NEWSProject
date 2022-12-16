@@ -19,8 +19,8 @@ Demo URL: https://spyproject.netlify.app/
 
 - Create `.env.local` file inside client
 - Fill in the followings
-- VITE_RAPID_API_KEY = https://rapidapi.com/tipsters/api/shazam-core/ <-- Go to this link and Sign Up, then you should see X-RapidAPI-Key inside Code Snippets. Copy it without the ""
-- VITE_UNSPLASH_ACCESS_KEY = https://unsplash.com/@developer/ <-- Go to this link Sign Up, then create a project and they will give you API Key. Copy it without the ""
+- MEDIASTACK_API_KEY = https://mediastack.com/quickstart <-- Go to this link and Sign Up, then you should get API Access Key in Step 1. Copy it without the ""
+- STEPZEN_API_KEY = https://stepzen.com/getting-started?details=rest <-- Go to this link Sign Up, then you should see Enter your Admin Key when prompted. Copy it without the ""
 
 ### Check if APIKey is working correctly
 
