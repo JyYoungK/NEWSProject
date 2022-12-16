@@ -4,15 +4,11 @@
 
 @layer components {
   .navLink {
-    @apply cursor-pointer rounded-full p-4 text-center capitalize decoration-orange-400 decoration-2 underline-offset-8 transition-transform duration-200 ease-out hover:scale-110 hover:font-bold hover:underline active:underline;
+    @apply cursor-pointer rounded-full p-3 text-center capitalize decoration-orange-400 decoration-2 underline-offset-8 transition-transform duration-200 ease-out hover:scale-110 hover:font-bold;
   }
 
   .headerTitle {
     @apply px-10 pt-5 font-serif text-4xl capitalize underline decoration-orange-400 decoration-double decoration-2 underline-offset-4;
-  }
-
-  .NEffect {
-    @apply flex transform items-center justify-center transition duration-500 hover:scale-150 hover:bg-red-600;
   }
 }
 

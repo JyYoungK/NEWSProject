@@ -8,6 +8,9 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      color: {
+        theme_newsPaper: "#C8BFB8",
+      },
       animation: {
         "spin-slow": "spin 3s linear infinite",
       },

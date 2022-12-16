@@ -3,42 +3,74 @@ import Link from "next/link";
 import DarkModeButton from "./DarkModeButton";
 import NavLinks from "./NavLinks";
 import SearchBox from "./SearchBox";
-
+import Weather from "./Weather";
 function Header() {
+  var today = new Date();
+  var day = today.getDay();
+  var days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  var dd = String(today.getDate()).padStart(2, "0");
+  var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+  var yyyy = today.getFullYear();
   return (
     <header>
-      <div className="grid grid-cols-3 items-center p-10">
-        <Bars3Icon className="h-8 w-8 cursor-pointer" />
-        <div className="flex items-center justify-center ">
-          <div className=" Five flex transform items-center justify-center text-6xl transition duration-500 hover:scale-150">
+      <hr className="my-4 h-1 border-0 bg-black dark:bg-[#3A160E]" />
+
+      <div className="grid grid-cols-3 items-center p-2">
+        {/* <Bars3Icon className="h-8 w-8 cursor-pointer" /> */}
+        <Weather />
+        <div className="flex justify-center text-2xl md:text-6xl">
+          <div className=" mr-2 flex  text-gray-500 dark:text-[#743828]">
+            Old{" "}
+          </div>
+          <div className=" flex transform items-center justify-center hover:scale-150">
             {" "}
-            {/* <Link href="/" prefetch={false}> */}
-            <h1 className="text-center"> N</h1>
-            {/* </Link> */}
+            <Link href="/" prefetch={false}>
+              <h1 className="text-center"> N</h1>
+            </Link>
           </div>
-          <div className=" flex transform items-center justify-center  text-6xl transition duration-500 hover:scale-150">
+          <div className=" flex transform items-center justify-center hover:scale-150">
             <h1 className="text-center"> E</h1>
-            {/* <h1 className="text-center font-serif text-4xl"> EWS</h1> */}
           </div>
-          <div className=" flex transform items-center justify-center text-6xl transition duration-500 hover:scale-150">
+          <div className=" flex transform items-center justify-center hover:scale-150">
             <h1 className="text-center"> W</h1>
-            {/* <h1 className="text-center font-serif text-4xl"> EWS</h1> */}
           </div>
-          <div className=" flex transform items-center justify-center  text-6xl transition duration-500 hover:scale-150">
+          <div className=" flex transform items-center justify-center hover:scale-150">
             <h1 className="text-center"> S</h1>
-            {/* <h1 className="text-center font-serif text-4xl"> EWS</h1> */}
+          </div>
+          <div className=" ml-2 flex text-gray-500 dark:text-[#743828]">
+            Paper{" "}
           </div>
         </div>
 
         <div className="flex items-center justify-end space-x-2">
           <DarkModeButton />
-          <button className="hidden rounded-full bg-slate-900 px-4 py-2 text-white dark:bg-slate-800 md:inline lg:px-8 lg:py-4">
-            Subscribe Now
-          </button>
         </div>
       </div>
-
-      <NavLinks />
+      <div className="py-auto mt-4 grid grid-cols-3 border-t-2 border-black dark:border-[#3A160E] dark:text-orange-500">
+        <div className="pl-2 font-mono text-sm font-bold md:text-lg ">
+          Vol.{yyyy % 1000} • No.{parseInt(mm) + parseInt(dd)}
+        </div>
+        <div className="flex justify-center font-mono text-sm font-bold md:text-lg">
+          {days[day]},{mm},{dd},{yyyy}
+        </div>
+        <div className="flex items-center justify-end pr-2 font-mono text-sm font-bold md:text-lg">
+          Price:1 Cent{" "}
+        </div>
+      </div>
+      <div className="border-t-2 border-b-4 border-black dark:border-[#3A160E]">
+        <NavLinks />
+      </div>
+      {/* <hr className="mt-4 h-0.5 border-0 bg-black dark:bg-white" />
+        <NavLinks />
+        <hr className="h-1 border-0 bg-black dark:bg-white" /> */}
 
       <SearchBox />
     </header>

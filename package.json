@@ -10,7 +10,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
     "@heroicons/react": "^2.0.13",
+    "@mui/material": "^5.11.0",
     "@next/font": "^13.0.3",
     "@tailwindcss/line-clamp": "^0.4.2",
     "encoding": "^0.1.13",
