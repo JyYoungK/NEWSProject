@@ -12,6 +12,7 @@
   "dependencies": {
     "@heroicons/react": "^2.0.13",
     "@next/font": "^13.0.3",
+    "@tailwindcss/line-clamp": "^0.4.2",
     "encoding": "^0.1.13",
     "framer-motion": "^7.6.12",
     "graphql-request": "^5.0.0",

@@ -82,3 +82,5 @@ All pages will be cached and stored for 60 seconds to load faster. After 60 seco
 - Dynamic Information means every time a request comes in you should fetch fresh value.
 - Static Information by default has a caching mechanism. We can use the next config to revalidate property. Simply said using an example, all users will get the same data for x amount
   of time because it will be stored in cache. After x amount of time, cache will be updated with new value. Code explanation is seen under fetchNews line 42
+
+15. Use line-clamp to make long setences shorter. Truncate is for one line. Install npm from here and add plugins as well. https://tailwindcss.com/blog/multi-line-truncation-with-tailwindcss-line-clamp
