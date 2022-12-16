@@ -23,4 +23,12 @@ type NewsResponse = {
   pagination: Pagination;
 };
 
-type Category = "nearby" | "entertainment" | "world" | "science";
+// type Category = "nearby" | "entertainment" | "world" | "science";
+type Category =
+  | "general"
+  | "business"
+  | "entertainment"
+  | "health"
+  | "science"
+  | "sports"
+  | "technology";
