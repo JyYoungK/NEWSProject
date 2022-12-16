@@ -18,10 +18,10 @@ function Article({ article }: Props) {
           <h2 className="font-serif font-bold">{article.title}</h2>
 
           <section className="mt-2 flex-1">
-            <p className="line-clamp-6 text-xs">{article.description}</p>
+            <p className="text-xs line-clamp-3">{article.description}</p>
           </section>
 
-          <footer>
+          <footer className="space-x-l ml-auto flex pt-5 text-right text-xs italic text-gray-400">
             <p>{article.source}</p>
             <p>{article.published_at}</p>
           </footer>

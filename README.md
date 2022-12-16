@@ -84,3 +84,8 @@ All pages will be cached and stored for 60 seconds to load faster. After 60 seco
   of time because it will be stored in cache. After x amount of time, cache will be updated with new value. Code explanation is seen under fetchNews line 42
 
 15. Use line-clamp to make long setences shorter. Truncate is for one line. Install npm from here and add plugins as well. https://tailwindcss.com/blog/multi-line-truncation-with-tailwindcss-line-clamp
+
+16. It is possible to make parent class client but it's child class server as long as the child class receives server components as a prop.
+    For example look at `Providers.tsx` and `layout.tsx`
+
+17. Toggle Theme, I used `npm i next-themes`. Check out `Providers.tsx` for use. Must add `darkMode: "class",` inside `tailwind.config.js`
