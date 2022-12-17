@@ -4,11 +4,12 @@ function Loading() {
       <button
         disabled
         type="button"
-        className="mr-2 inline-flex items-center rounded-lg bg-blue-700 px-5 py-2.5 text-center  text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        className="mr-2 inline-flex items-center rounded-lg bg-black  text-center  text-white  focus:ring-4 dark:bg-[#3A160E] dark:focus:ring-[#3A160E]"
       >
+        Loading...
         <svg
           role="status"
-          className="mr-3 inline h-4 w-4 animate-spin text-white"
+          className="mr-3 inline h-full w-full animate-spin text-white"
           viewBox="0 0 100 101"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -22,7 +23,6 @@ function Loading() {
             fill="currentColor"
           />
         </svg>
-        Loading...
       </button>
     </div>
   );
