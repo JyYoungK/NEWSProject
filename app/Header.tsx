@@ -16,8 +16,22 @@ function Header() {
     "Friday",
     "Saturday",
   ];
+  var mL = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
   var dd = String(today.getDate()).padStart(2, "0");
-  var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+  var mm = String(today.getMonth()).padStart(2, "0"); //January is 0!
   var yyyy = today.getFullYear();
 
   let beginning = new Date(`1/1/${yyyy}`);
@@ -32,22 +46,27 @@ function Header() {
         <Weather />
         <div className="flex justify-center text-2xl md:text-6xl">
           <div className=" mr-2 flex  text-gray-500 dark:text-[#743828]">
-            Old{" "}
+            Old
           </div>
           <div className=" flex transform items-center justify-center hover:scale-150">
-            {" "}
             <Link href="/" prefetch={false}>
               <h1 className="text-center"> N</h1>
             </Link>
           </div>
           <div className=" flex transform items-center justify-center hover:scale-150">
-            <h1 className="text-center"> E</h1>
+            <Link href="/" prefetch={false}>
+              <h1 className="text-center"> E</h1>
+            </Link>
           </div>
           <div className=" flex transform items-center justify-center hover:scale-150">
-            <h1 className="text-center"> W</h1>
+            <Link href="/" prefetch={false}>
+              <h1 className="text-center"> W</h1>
+            </Link>
           </div>
           <div className=" flex transform items-center justify-center hover:scale-150">
-            <h1 className="text-center"> S</h1>
+            <Link href="/" prefetch={false}>
+              <h1 className="text-center"> S</h1>
+            </Link>
           </div>
           <div className=" ml-2 flex text-gray-500 dark:text-[#743828]">
             Paper{" "}
@@ -63,7 +82,7 @@ function Header() {
           Vol.{yyyy % 1000} • No.{totalDays}
         </div>
         <div className="flex justify-center font-mono text-sm font-bold md:text-lg">
-          {days[day]},{mm},{dd},{yyyy}
+          {days[day]}, {mL[parseInt(mm)]} {dd} {yyyy}
         </div>
         <div className="flex items-center justify-end pr-2 font-mono text-sm font-bold md:text-lg">
           Price:1¢{" "}
