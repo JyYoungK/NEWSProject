@@ -19,7 +19,7 @@ function Article({ article }: Props) {
   return (
     <article
       onClick={handleClick}
-      className="mt-5 flex h-full w-56 cursor-pointer flex-col font-serif text-black shadow-lg transition-all duration-200 ease-out hover:bg-slate-200 hover:shadow-xl dark:text-[#3A160E] dark:hover:bg-[#9b5e51] "
+      className="mt-5 flex h-full cursor-pointer flex-col font-serif text-black shadow-lg transition-all duration-200 ease-out hover:bg-slate-200 hover:shadow-xl dark:text-[#3A160E] dark:hover:bg-[#9b5e51] md:w-56 "
     >
       {article.image && (
         <img

@@ -1,6 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
 import { getFormattedWeatherData } from "../lib/fetchWeather";
+import NorthIcon from "@mui/icons-material/North";
+import SouthIcon from "@mui/icons-material/South";
 
 type WeatherData = {
   description: any;
@@ -68,8 +70,9 @@ function Weather() {
                 }
                 `}
               </div>
-              <div className="flex flex-row md:text-base">
+              <div className="flex hidden flex-row gap-1 sm:block md:text-base">
                 <div onClick={handleUnitsClick}>
+                  <NorthIcon className="md:mb-1 md:text-sm" />
                   {`${
                     celcius === true
                       ? (weather.temp_max - 273.15).toFixed(2) + "°C"
@@ -80,6 +83,7 @@ function Weather() {
                 `}
                 </div>
                 <div onClick={handleUnitsClick}>
+                  <SouthIcon className="md:mb-1 md:text-sm" />
                   {`${
                     celcius === true
                       ? (weather.temp_min - 273.15).toFixed(2) + "°C"
