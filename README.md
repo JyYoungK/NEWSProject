@@ -20,7 +20,8 @@ Demo URL: https://spyproject.netlify.app/
 - Create `.env.local` file inside client
 - Fill in the followings
 - MEDIASTACK_API_KEY = https://mediastack.com/quickstart <-- Go to this link and Sign Up, then you should get API Access Key in Step 1. Copy it without the ""
-- STEPZEN_API_KEY = https://stepzen.com/getting-started?details=rest <-- Go to this link Sign Up, then you should see Enter your Admin Key when prompted. Copy it without the ""
+- STEPZEN_API_KEY = https://stepzen.com/getting-started?details=rest <-- Go to this link and Sign Up, then you should see Enter your Admin Key when prompted. Copy it without the ""
+- NEXT_PUBLIC_WEATHER_API_KEY = https://openweathermap.org/api <-- Go to this link and Sign Up, then you should see your Key when prompted. Copy it without the ""
 
 ### Check if APIKey is working correctly
 
@@ -89,3 +90,5 @@ All pages will be cached and stored for 60 seconds to load faster. After 60 seco
     For example look at `Providers.tsx` and `layout.tsx`
 
 17. Toggle Theme, I used `npm i next-themes`. Check out `Providers.tsx` for use. Must add `darkMode: "class",` inside `tailwind.config.js`
+
+18. Using NextJS, you must ADD the prefix `NEXT_PUBLIC_` to all of your environment variables.
