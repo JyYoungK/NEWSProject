@@ -1,6 +1,7 @@
 import "./globals.css";
 import Header from "./Header";
 import Providers from "./Providers";
+import ScrollTop from "./ScrollTop";
 
 export default function RootLayout({
   children,
@@ -20,7 +21,8 @@ export default function RootLayout({
         <Providers>
           <Header />
           <div className="mx-auto max-w-6xl">{children}</div>
-          <div className="border-y-4 border-b-4 border-black py-4 dark:border-[#3A160E]" />
+          <div className="border-b-4 border-black py-4 dark:border-[#3A160E]" />
+          <ScrollTop />
         </Providers>
       </body>
     </html>

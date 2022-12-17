@@ -37,7 +37,6 @@ function ArticlePage({ searchParams }: Props) {
               <LiveTimeStamp time={article.published_at} />
             </p>
           </div>
-
           <p className="pt-4">{article.description}</p>
         </div>
       </section>

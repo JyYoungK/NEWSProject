@@ -1,7 +1,6 @@
 "use client";
 
 import LiveTimeStamp from "./LiveTimestamp";
-import ReadMoreButton from "./ReadMoreButton";
 import { useRouter } from "next/navigation";
 
 type Props = {
@@ -20,13 +19,13 @@ function Article({ article }: Props) {
   return (
     <article
       onClick={handleClick}
-      className="hover: flex cursor-pointer flex-col border-b-2 border-black font-serif text-black shadow-lg transition-all duration-200 ease-out hover:scale-105 hover:bg-slate-200 hover:shadow-xl dark:text-[#3A160E] dark:hover:bg-[#9b5e51] "
+      className="mt-5 flex h-full w-56 cursor-pointer flex-col font-serif text-black shadow-lg transition-all duration-200 ease-out hover:bg-slate-200 hover:shadow-xl dark:text-[#3A160E] dark:hover:bg-[#9b5e51] "
     >
       {article.image && (
         <img
           src={article.image}
           alt={article.title}
-          className="h-56 w-full object-cover shadow-md"
+          className="relative h-28 w-56 object-cover shadow-md grayscale"
         />
       )}
 
@@ -35,17 +34,16 @@ function Article({ article }: Props) {
           <h2 className="font-bold">{article.title}</h2>
 
           <section className="mt-2 flex-1">
-            <p className="text:sm md:text-base">{article.description}</p>
+            <p className="text:sm md:text-base ">{article.description}</p>
           </section>
 
-          <footer className="mt-2 flex justify-end space-x-1 text-xs italic ">
-            <p className="justify-end">{article.source.slice(0, 12)} • </p>
+          <footer className="my-2 flex justify-end space-x-1 text-xs italic ">
+            <p className="justify-end">{article.source.slice(0, 18)} • </p>
             <p className="justify-end">
               <LiveTimeStamp time={article.published_at} />
             </p>
           </footer>
         </div>
-        {/* <ReadMoreButton article={article} /> */}
       </div>
     </article>
   );

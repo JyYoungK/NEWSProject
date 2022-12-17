@@ -6,10 +6,9 @@ function Loading() {
         type="button"
         className="mr-2 inline-flex items-center rounded-lg bg-black  text-center  text-white  focus:ring-4 dark:bg-[#3A160E] dark:focus:ring-[#3A160E]"
       >
-        Loading...
         <svg
           role="status"
-          className="mr-3 inline h-full w-full animate-spin text-white"
+          className="nline h-1/2 w-1/2 animate-spin text-white"
           viewBox="0 0 100 101"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -23,6 +22,7 @@ function Loading() {
             fill="currentColor"
           />
         </svg>
+        <div className="ml-5 text-2xl font-bold">Loading...</div>
       </button>
     </div>
   );
