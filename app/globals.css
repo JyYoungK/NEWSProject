@@ -21,3 +21,9 @@
   font-family: "Old English Five";
   src: url("../public/fonts/OldEnglishFive.ttf");
 }
+
+.col-rule-solid {
+  -webkit-column-rule: 3px solid #000000; /* Chrome, Safari, Opera */
+  -moz-column-rule: 3px solid #000000; /* Firefox */
+  column-rule: 3px solid #000000;
+}

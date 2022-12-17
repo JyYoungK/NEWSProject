@@ -18,12 +18,23 @@ module.exports = {
         oldEnglish: ["Old English Five", "regular"],
         anglican: ["AnglicanText", "regular"],
       },
-
       keyframes: {
         shine: {
           "100%": { left: "125%" },
         },
       },
+      columnRuleStyle: [
+        "none",
+        "hidden",
+        "dotted",
+        "dashed",
+        "solid",
+        "double",
+        "groove",
+        "ridge",
+        "inset",
+        "outset",
+      ],
     },
   },
 

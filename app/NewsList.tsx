@@ -5,11 +5,14 @@ type Props = {
 };
 function NewsList({ news }: Props) {
   return (
-    <main className="grid grid-cols-1 gap-10 p-10 md:grid-cols-2 lg:grid-cols-3">
-      {news.data.map((article) => (
-        <Article key={article.title} article={article} />
-      ))}
-    </main>
+    <div className="col-rule-solid flex h-full w-full justify-center md:ml-2">
+      <div className="col-rule-solid h-full gap-5 md:columns-5 ">
+        {" "}
+        {news.data.map((article) => (
+          <Article key={article.title} article={article} />
+        ))}
+      </div>
+    </div>
   );
 }
 

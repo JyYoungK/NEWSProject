@@ -20,6 +20,7 @@ export default function RootLayout({
         <Providers>
           <Header />
           <div className="mx-auto max-w-6xl">{children}</div>
+          <div className="border-y-4 border-b-4 border-black py-4 dark:border-[#3A160E]" />
         </Providers>
       </body>
     </html>

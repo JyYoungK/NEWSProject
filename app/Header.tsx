@@ -66,16 +66,12 @@ function Header() {
           {days[day]},{mm},{dd},{yyyy}
         </div>
         <div className="flex items-center justify-end pr-2 font-mono text-sm font-bold md:text-lg">
-          Price:1 Cent{" "}
+          Price:1¢{" "}
         </div>
       </div>
       <div className="border-t-2 border-b-4 border-black dark:border-[#3A160E]">
         <NavLinks />
       </div>
-      {/* <hr className="mt-4 h-0.5 border-0 bg-black dark:bg-white" />
-        <NavLinks />
-        <hr className="h-1 border-0 bg-black dark:bg-white" /> */}
-
       <SearchBox />
     </header>
   );

@@ -32,7 +32,9 @@ async function NewsCategory({ params: { category } }: Props) {
   return (
     <div>
       {" "}
-      <h1 className="headerTitle">{category} </h1>
+      <h1 className="mb-5 font-mono text-lg font-bold dark:text-[#3A160E] md:text-4xl">
+        {category.toUpperCase()}{" "}
+      </h1>
       <NewsList news={news} />
     </div>
   );
