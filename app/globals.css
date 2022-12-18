@@ -27,3 +27,31 @@
   -moz-column-rule: 3px solid #000000; /* Firefox */
   column-rule: 3px solid #000000;
 }
+
+.south-bounce {
+  animation: southbounce 1s infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes southbounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
