@@ -39,14 +39,14 @@ function Header() {
   let difference = today.getTime() - beginning.getTime();
   let totalDays = Math.ceil(difference / (1000 * 60 * 60 * 24));
   return (
-    <header>
+    <div>
       <hr className="my-4 h-1 border-0 bg-black dark:bg-[#3A160E]" />
 
       <div className="grid grid-cols-3 items-center p-2">
         {/* <Bars3Icon className="h-8 w-8 cursor-pointer" /> */}
         <Weather />
-        <div className="flex justify-center text-2xl md:text-6xl">
-          <div className=" mr-2 flex  text-gray-500 dark:text-[#743828]">
+        <div className="flex flex-col justify-center text-4xl md:flex-row lg:text-6xl">
+          <div className=" mr-2 hidden text-gray-500 dark:text-[#743828] sm:block">
             Old
           </div>
 
@@ -70,7 +70,7 @@ function Header() {
               <h1 className="text-center"> S</h1>
             </Link>
           </div>
-          <div className=" ml-2 flex text-gray-500 dark:text-[#743828]">
+          <div className="ml-2 hidden text-gray-500 dark:text-[#743828] sm:block">
             Paper
           </div>
         </div>
@@ -96,7 +96,7 @@ function Header() {
         <NavLinks />
       </div>
       <SearchBox />
-    </header>
+    </div>
   );
 }
 

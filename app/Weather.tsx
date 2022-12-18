@@ -55,14 +55,14 @@ function Weather() {
         <div className="h-30 flex flex-col md:flex-row">
           <div className="h-full align-middle">
             <img className="" src={weather.iconURL} alt="weatherIcon" />
-            <div className="hidden sm:block md:text-xl ">
+            <div className="hidden sm:block lg:text-xl ">
               {weatherDescription ?? weatherDescription}
             </div>
           </div>
-          <div className="my-auto align-middle md:text-3xl">
-            <div className="md:mt-6 md:ml-2">
+          <div className="my-auto align-middle text-base lg:text-3xl">
+            <div className="md:mt-6 lg:ml-2">
               <div className="underline">{`${weather.name}, ${weather.country}`}</div>
-              <div onClick={handleUnitsClick}>
+              <div className="hover:cursor-pointer" onClick={handleUnitsClick}>
                 {`${
                   celcius === true
                     ? (weather.temp - 273.15).toFixed(2) + "°C"
@@ -70,7 +70,7 @@ function Weather() {
                 }
                 `}
               </div>
-              <div className="flex hidden flex-row gap-1 sm:block md:text-base">
+              <div className="hidden flex-row gap-1 hover:cursor-pointer sm:block md:text-base">
                 <div onClick={handleUnitsClick}>
                   <NorthIcon className="animate-bounce md:mb-1 md:text-sm" />
                   {`${
