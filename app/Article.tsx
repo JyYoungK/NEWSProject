@@ -40,8 +40,7 @@ function Article({ article }: Props) {
               article.category === "bio" ? null : null
             }`}
           >
-            {/* <FastTypewriter text={article.description} /> */}
-            {article.description}
+            <FastTypewriter text={article.description} />
           </section>
 
           <footer className="my-2 flex justify-end space-x-1 pr-1 text-xs italic">
