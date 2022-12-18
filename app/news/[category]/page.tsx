@@ -15,7 +15,7 @@ type Props = {
 };
 
 async function NewsCategory({ params: { category } }: Props) {
-  let news: NewsResponse = dummyNews;
+  let news: any = dummyNews;
   if (category === "general") {
     news = dummyGeneral || (await fetchNews(category));
   } else if (category === "business") {

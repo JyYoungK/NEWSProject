@@ -2,7 +2,6 @@
 
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
-import { SunIcon, MoonIcon } from "@heroicons/react/24/solid";
 import WolfIcon from "../public/logos/Wolf.png";
 import BuffaloIcon from "../public/logos/Buffalo.png";
 

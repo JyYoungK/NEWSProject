@@ -79,7 +79,7 @@ function Weather() {
               </div>
               <div className="hidden flex-row gap-1 hover:cursor-pointer sm:block md:text-base">
                 <div onClick={handleUnitsClick}>
-                  <NorthIcon className="animate-bounce md:mb-1 md:text-sm" />
+                  <NorthIcon className="animate-bounce md:mb-2 md:text-sm" />
                   {`${
                     celcius === true
                       ? (weather.temp_max - 273.15).toFixed(2) + "°C"

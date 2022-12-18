@@ -2,13 +2,13 @@
 
 (Note: This website does not have the paid API key. Some components are limited)
 
-Demo URL: https://spyproject.netlify.app/
+Demo URL: https://newsproject-nugmup3x5-jyyoungk.vercel.app/
 
 ## Main Stack - M.E.R.N
 
 ### Frontend
 
-- React as framework
+- React/NextJS13 as framework
 - Dynamic Data
 - Typescript
 - GraphQL
@@ -23,6 +23,16 @@ Demo URL: https://spyproject.netlify.app/
 - STEPZEN_API_KEY = https://stepzen.com/getting-started?details=rest <-- Go to this link and Sign Up, then you should see Enter your Admin Key when prompted. Copy it without the ""
 - NEXT_PUBLIC_WEATHER_API_KEY = https://openweathermap.org/api <-- Go to this link and Sign Up, then you should see your Key when prompted. Copy it without the ""
 
+### Deploying to Vercel
+
+- Create a vercel account and download vercel. I did `npm i -g vercel`
+- Then open terminal and type `vercel login` to log in.
+- In terminal type `vercel` to create a project.
+- Go to vercel website and set up env variables. For this project, it needs 3. (MEDIASTACK_API_KEY, STEPZEN_API_KEY, NEXT_PUBLIC_WEATHER_API_KEY)
+- Type `vercel env pull` . It should generate .env file
+- Type `npm run build` in terminal.
+- Finally Type `vercel` again.
+
 ### Check if APIKey is working correctly
 
 - Open powershell and type `stepzen start`
@@ -31,7 +41,7 @@ Demo URL: https://spyproject.netlify.app/
 
 ex)
 
-- VITE_RAPID_API_KEY = KJwZZIJSFimshuivMSVGaiYzkRomp15f2vKjsnK4bKzuUzVLzA
+- MEDIASTACK_API_KEY = 1738f884cc43a0a35f70613a84353236
 
 ## NextJS13 + Tailwind Note
 
