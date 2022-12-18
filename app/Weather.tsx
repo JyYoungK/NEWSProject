@@ -54,12 +54,16 @@ function Weather() {
       {weather && (
         <div className="h-30 flex flex-col md:flex-row">
           <div className="h-full align-middle">
-            <img className="" src={weather.iconURL} alt="weatherIcon" />
+            <img
+              className="w-20 md:w-28"
+              src={weather.iconURL}
+              alt="weatherIcon"
+            />
             <div className="hidden sm:block lg:text-xl ">
               {weatherDescription ?? weatherDescription}
             </div>
           </div>
-          <div className="my-auto align-middle text-base lg:text-3xl">
+          <div className="my-auto align-middle text-xl lg:text-3xl">
             <div className="md:mt-6 lg:ml-2">
               <div className="underline">{`${weather.name}, ${weather.country}`}</div>
               <div className="hover:cursor-pointer" onClick={handleUnitsClick}>
