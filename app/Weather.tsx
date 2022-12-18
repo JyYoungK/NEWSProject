@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { getFormattedWeatherData } from "../lib/fetchWeather";
 import NorthIcon from "@mui/icons-material/North";
 import SouthIcon from "@mui/icons-material/South";
+import ThermostatIcon from "@mui/icons-material/Thermostat";
 
 type WeatherData = {
   description: any;
@@ -63,10 +64,12 @@ function Weather() {
               {weatherDescription ?? weatherDescription}
             </div>
           </div>
-          <div className="my-auto align-middle text-xl lg:text-3xl">
+          <div className="my-auto align-middle text-lg lg:text-3xl">
             <div className="md:mt-6 lg:ml-2">
-              <div className="underline">{`${weather.name}, ${weather.country}`}</div>
+              <div className="text-base underline lg:text-xl">{`${weather.name}, ${weather.country}`}</div>
               <div className="hover:cursor-pointer" onClick={handleUnitsClick}>
+                <ThermostatIcon className="mb-1" />
+
                 {`${
                   celcius === true
                     ? (weather.temp - 273.15).toFixed(2) + "°C"
