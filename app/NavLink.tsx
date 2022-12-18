@@ -12,7 +12,7 @@ function NavLink({ category, isActive }: Props) {
       href={`/news/${category}`}
       className={`navLink mt-1 ${
         isActive &&
-        "mt-0 mb-1 text-lg font-bold underline decoration-orange-400 underline-offset-4"
+        "mt-0 mb-1 text-lg font-bold underline decoration-slate-700 underline-offset-4 dark:decoration-orange-400"
       }`}
     >
       {" "}

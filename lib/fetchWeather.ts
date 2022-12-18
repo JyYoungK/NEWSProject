@@ -9,7 +9,6 @@ const getFormattedWeatherData = async (lat: Number, lon: Number) => {
     .then((res) => res.json())
     .then((data) => data);
 
-  console.log(weatherData);
   const {
     weather,
     main: { temp, feels_like, temp_min, temp_max, pressure, humidity },

@@ -2,7 +2,7 @@
 
 import LiveTimeStamp from "./LiveTimestamp";
 import { useRouter } from "next/navigation";
-
+import FastTypewriter from "./Typewriter/FastTypewriter";
 type Props = {
   article: Article;
 };
@@ -34,7 +34,7 @@ function Article({ article }: Props) {
           <h2 className="font-bold">{article.title}</h2>
 
           <section className="mt-2 flex-1">
-            <p className="text:sm md:text-base ">{article.description}</p>
+            <FastTypewriter text={article.description} />
           </section>
 
           <footer className="my-2 flex justify-end space-x-1 text-xs italic ">

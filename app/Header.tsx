@@ -1,9 +1,10 @@
-import { Bars3Icon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 import DarkModeButton from "./DarkModeButton";
 import NavLinks from "./NavLinks";
 import SearchBox from "./SearchBox";
 import Weather from "./Weather";
+import Typewriter from "./Typewriter/Typewriter";
+
 function Header() {
   var today = new Date();
   var day = today.getDay();
@@ -48,6 +49,7 @@ function Header() {
           <div className=" mr-2 flex  text-gray-500 dark:text-[#743828]">
             Old
           </div>
+
           <div className=" flex transform items-center justify-center hover:scale-150">
             <Link href="/" prefetch={false}>
               <h1 className="text-center"> N</h1>
@@ -69,7 +71,7 @@ function Header() {
             </Link>
           </div>
           <div className=" ml-2 flex text-gray-500 dark:text-[#743828]">
-            Paper{" "}
+            Paper
           </div>
         </div>
 
@@ -85,7 +87,7 @@ function Header() {
           {days[day]}, {mL[parseInt(mm)]} {dd} {yyyy}
         </div>
         <div className="flex items-center justify-end pr-2 font-mono text-sm font-bold md:text-lg">
-          Price:1¢{" "}
+          <Typewriter text={"Price:1¢"} />
         </div>
       </div>
       <div className="border-t-2 border-b-4 border-black dark:border-[#3A160E]">
