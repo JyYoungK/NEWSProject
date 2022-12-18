@@ -3,6 +3,8 @@
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
 import { SunIcon, MoonIcon } from "@heroicons/react/24/solid";
+import WolfIcon from "../public/logos/Wolf.png";
+import BuffaloIcon from "../public/logos/Buffalo.png";
 
 function DarkModeButton() {
   const [mounted, setMounted] = useState(false); //using mount to prevent system from being confused on which theme to use because tailwind reacts with computer theme setting as well.
@@ -17,13 +19,15 @@ function DarkModeButton() {
   return (
     <div>
       {currentTheme === "dark" ? (
-        <SunIcon
-          className="h-8 w-8 cursor-pointer"
+        <img
+          className="h-14 w-14 cursor-pointer pr-2"
+          src={BuffaloIcon.src}
           onClick={() => setTheme("light")}
         />
       ) : (
-        <MoonIcon
-          className="h-8 w-8 cursor-pointer"
+        <img
+          className="h-14 w-14 cursor-pointer pr-2"
+          src={WolfIcon.src}
           onClick={() => setTheme("dark")}
         />
       )}
