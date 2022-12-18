@@ -7,7 +7,11 @@ function NewsList({ news }: Props) {
   return (
     <div>
       <div className="col-rule-solid flex h-full w-full justify-center md:ml-2">
-        <div className="col-rule-solid h-full gap-5 md:columns-5 ">
+        <div
+          className={`col-rule-solid h-full gap-5 ${
+            news.data[0].category === "bio" ? "md:columns-3" : "md:columns-5"
+          }`}
+        >
           {" "}
           {news.data.map((article, i) => (
             <Article key={i} article={article} />

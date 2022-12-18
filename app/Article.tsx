@@ -25,14 +25,9 @@ function Article({ article }: Props) {
         <img
           src={article.image}
           alt={article.title}
-          className="relative object-cover shadow-md grayscale dark:grayscale-0"
-          style={{
-            height:
-              article.image === "https://i.ibb.co/sCTJZ1B/1.png"
-                ? "350px"
-                : "112px",
-            width: "224px",
-          }}
+          className={`relative w-full object-cover shadow-md grayscale dark:grayscale-0 ${
+            article.category === "bio" ? "h-68" : "h-40"
+          } `}
         />
       )}
 
@@ -42,19 +37,18 @@ function Article({ article }: Props) {
 
           <section
             className={`mt-2 flex-1 ${
-              article.image === "https://i.ibb.co/sCTJZ1B/1.png"
-                ? "line-clamp-6"
-                : null
+              article.category === "bio" ? null : null
             }`}
           >
-            <FastTypewriter text={article.description} />
+            {/* <FastTypewriter text={article.description} /> */}
+            {article.description}
           </section>
 
-          <footer className="my-2 flex justify-end space-x-1 text-xs italic ">
-            <p className="justify-end">{article.source.slice(0, 18)} • </p>
-            <p className="justify-end">
+          <footer className="my-2 flex justify-end space-x-1 pr-1 text-xs italic">
+            <div>{article.source.slice(0, 18)} • </div>
+            <div>
               <LiveTimeStamp time={article.published_at} />
-            </p>
+            </div>
           </footer>
         </div>
       </div>

@@ -8,6 +8,14 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      lineClamp: {
+        8: "8",
+        9: "9",
+        10: "10",
+        11: "11",
+        22: "22",
+        32: "32",
+      },
       color: {
         theme_newsPaper: "#C8BFB8",
       },

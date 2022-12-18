@@ -9,7 +9,7 @@
   "data": [
     {
       "author": "Junyoung (Johnny) Kang",
-      "category": "general",
+      "category": "bio",
       "description": "Hi, I'm Junyoung (Johnny). I am from Toronto, Canada and I have two years of experience as a Front End developer. I have always wanted to make a newspaper that comes out from 'Harry Potter'. So I created this website looking like one. All datas are being fetched from https://openweathermap.org/api and https://mediastack.com/ but due to an API call limit I have set the dummy data to display articles but I left `Search` tool to fetch from API. This project's goal was to become more knowledgable of NextJS13, GraphQL and TailwindCSS. Here are some knowledge of NextJS13 and Tailwind I learned during the process. Everything under `pages` folders are client component To create a server component, create `app` folder in the root folder. So everything under `app` folder are server components. Downloading NextJS will make the setting to NextJS12, but if you wish to convert it to NextJS13, create `page.jsx` or `page.tsx` under app folder which will be the new home directory. Since `index.jsx` or `index.tsx` inside `pages` folder is also a home directory, this will conflict so remove it. **DO NOT** use `<html>`` in children page page.tsx. It will cause hydration error!!! Use `<main>` or `<>` instead. (I struggled with this error the most while using NextJS13) For navigating, use next/link. To use click, handler, hooks, or any interactive element that requires binding to an element you need to switch to a client component, add `use client` on top of the code. There are many other notes I wrote and I put it in README.md. Other than that, enjoy looking around!",
       "country": "us",
       "image": "https://i.ibb.co/sCTJZ1B/1.png",
@@ -20,7 +20,7 @@
     },
     {
       "author": "Junyoung (Johnny) Kang",
-      "category": "general",
+      "category": "bio",
       "description": "I LOVE ENTERTAINMENTS such as Music, Picture, and Videos. So I made a website that has it all. SPY stands for (Spotify/Pinterest/Youtube). From this website, you can be updated with all real-time Top Charts/Artists/Pictures/Videos. All data are being fetched from working API. I find having two themes(light/dark) on every website getting old. So I created a theme that can toggle between 4 seasons(green, blue, red, grey) + 2 (light/dark) theme",
       "country": "us",
       "image": "https://i.ibb.co/kMw3GxM/318079798-707876150953305-3898617955148906755-n.png",
@@ -31,7 +31,7 @@
     },
     {
       "author": "Junyoung (Johnny) Kang",
-      "category": "general",
+      "category": "bio",
       "description": "Will increasingly sophisticated AI replace programmers, artists, and potentially other jobs in near future is a hot topic in the industry. I believe writing lots of lines of code in a specific language will become a smaller proportion of the role of a software engineer. However, problem solving through creativity, design skills, security awareness, effective deployment, implementation, and a very broad level of understanding of how complex and sophisticated system components fit together will be the significant proportion of the role. I still do think it is important to keep updating my knowledge of what AI can do and can not do. So my next project is going to be related to AI topic to expand and improve on how I can integrate AI into my skill.",
       "country": "us",
       "image": "https://i.ibb.co/mhgtvPQ/AI-HERO-58306268c6f4b659459f5b7b2dd3e8a5.jpg",

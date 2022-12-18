@@ -20,7 +20,7 @@ function DarkModeButton() {
     <div>
       {currentTheme === "dark" ? (
         <img
-          className="h-14 w-14 cursor-pointer pr-2"
+          className="h-14 w-16 cursor-pointer pr-2"
           src={BuffaloIcon.src}
           onClick={() => setTheme("light")}
         />
