@@ -2,7 +2,7 @@
 
 (Note: This website does not have the paid API key. Some components are limited)
 
-Demo URL: https://newsproject-nugmup3x5-jyyoungk.vercel.app/
+Demo URL: https://newsproject-jyyoungk.vercel.app/
 
 ## Main Stack - M.E.R.N
 
