@@ -4,6 +4,7 @@ import NavLinks from "./NavLinks";
 import SearchBox from "./SearchBox";
 import Weather from "./Weather";
 import Typewriter from "./Typewriter/Typewriter";
+import CurrentTime from "./CurrentTime";
 
 function Header() {
   var today = new Date();
@@ -86,7 +87,13 @@ function Header() {
           </div>
         </div>
         <div className="flex justify-center font-mono text-sm font-bold md:text-lg">
-          {days[day]}, {mL[parseInt(mm)]} {dd} {yyyy}
+          <div className="hidden sm:block">{days[day]}, </div>
+          <div className="mx-1 ">
+            {mL[parseInt(mm)]}-{dd}-{yyyy}
+          </div>
+          <div className="hidden sm:block">
+            <CurrentTime today={today.toLocaleString()} />
+          </div>
         </div>
         <div className="flex items-center justify-end pr-2 font-mono text-sm font-bold md:text-lg">
           <Typewriter text={"Price:1¢"} />

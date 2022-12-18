@@ -55,7 +55,7 @@ function Weather() {
         <div className="h-30 flex flex-col md:flex-row">
           <div className="h-full align-middle">
             <img
-              className="w-20 md:w-28"
+              className="w-20 grayscale dark:grayscale-0 md:w-28"
               src={weather.iconURL}
               alt="weatherIcon"
             />
