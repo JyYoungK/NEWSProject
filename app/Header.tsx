@@ -50,22 +50,22 @@ function Header() {
             Old
           </div>
 
-          <div className=" flex transform items-center justify-center hover:scale-150">
+          <div className="n-mover flex items-center justify-center">
             <Link href="/" prefetch={false}>
               <h1 className="text-center"> N</h1>
             </Link>
           </div>
-          <div className=" flex transform items-center justify-center hover:scale-150">
+          <div className="e-mover flex items-center justify-center">
             <Link href="/" prefetch={false}>
               <h1 className="text-center"> E</h1>
             </Link>
           </div>
-          <div className=" flex transform items-center justify-center hover:scale-150">
+          <div className="w-mover flex items-center justify-center">
             <Link href="/" prefetch={false}>
               <h1 className="text-center"> W</h1>
             </Link>
           </div>
-          <div className=" flex transform items-center justify-center hover:scale-150">
+          <div className="s-mover flex items-center justify-center">
             <Link href="/" prefetch={false}>
               <h1 className="text-center"> S</h1>
             </Link>
@@ -81,7 +81,9 @@ function Header() {
       </div>
       <div className="py-auto mt-4 grid grid-cols-3 border-t-2 border-black dark:border-[#3A160E] dark:text-orange-500">
         <div className="pl-2 font-mono text-sm font-bold md:text-lg ">
-          Vol.{yyyy % 1000} • No.{totalDays}
+          <div className="volslide pl-2">
+            Vol.{yyyy % 1000} • No.{totalDays}
+          </div>
         </div>
         <div className="flex justify-center font-mono text-sm font-bold md:text-lg">
           {days[day]}, {mL[parseInt(mm)]} {dd} {yyyy}

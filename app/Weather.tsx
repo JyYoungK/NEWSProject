@@ -19,7 +19,7 @@ type WeatherData = {
 };
 
 function Weather() {
-  const [celcius, setCelcius] = useState(false);
+  const [celcius, setCelcius] = useState(true);
   const [weather, setWeather] = useState<WeatherData>();
 
   useEffect(() => {
@@ -54,8 +54,8 @@ function Weather() {
       {weather && (
         <div className="h-30 flex flex-col md:flex-row">
           <div className="h-full align-middle">
-            <img src={weather.iconURL} alt="weatherIcon" />
-            <div className="hidden sm:block md:text-xl">
+            <img className="" src={weather.iconURL} alt="weatherIcon" />
+            <div className="hidden sm:block md:text-xl ">
               {weatherDescription ?? weatherDescription}
             </div>
           </div>

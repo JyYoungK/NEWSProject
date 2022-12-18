@@ -55,3 +55,71 @@
     transform: translateY(0);
   }
 }
+
+.blink {
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+.volslide {
+  position: absolute;
+  left: -155px;
+  -webkit-animation: slide 0.5s forwards;
+  -webkit-animation-delay: 2s;
+  animation: slide 0.5s forwards;
+  animation-delay: 2s;
+}
+
+@-webkit-keyframes slide {
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes slide {
+  100% {
+    left: 0;
+  }
+}
+
+.n-mover {
+  animation: move 10s infinite ease-in-out;
+}
+
+.e-mover {
+  animation: move 10s infinite ease-in-out;
+  animation-delay: 1s;
+}
+
+.w-mover {
+  animation: move 10s infinite ease-in-out;
+  animation-delay: 2s;
+}
+
+.s-mover {
+  animation: move 10s infinite ease-in-out;
+  animation-delay: 3s;
+}
+
+@keyframes move {
+  0%,
+  40%,
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0);
+  }
+  60% {
+    opacity: 0;
+    transform: translate(100px, 0);
+  }
+}

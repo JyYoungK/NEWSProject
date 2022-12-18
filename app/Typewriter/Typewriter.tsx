@@ -15,7 +15,7 @@ const Typewriter = ({ text }: { text: string }) => {
       clearInterval(intervalId);
     };
   }, [index, text]);
-  return <div>{currentText}</div>;
+  return <div className="blink">{currentText}</div>;
 };
 
 export default Typewriter;
