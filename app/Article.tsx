@@ -19,13 +19,20 @@ function Article({ article }: Props) {
   return (
     <article
       onClick={handleClick}
-      className="mt-5 flex h-full cursor-pointer flex-col font-serif text-black shadow-lg transition-all duration-200 ease-out hover:bg-slate-200 hover:shadow-xl dark:text-[#3A160E] dark:hover:bg-[#7e5a52] md:w-56 "
+      className="mt-5 flex h-full cursor-pointer flex-col font-serif text-black shadow-lg transition-all duration-200 ease-out hover:bg-slate-200 hover:shadow-xl dark:text-[#3A160E] dark:hover:bg-[#9b5e51] md:w-56 "
     >
       {article.image && (
         <img
           src={article.image}
           alt={article.title}
-          className="relative h-28 w-56 object-cover shadow-md grayscale dark:grayscale-0"
+          className="relative object-cover shadow-md grayscale dark:grayscale-0"
+          style={{
+            height:
+              article.image === "https://i.ibb.co/sCTJZ1B/1.png"
+                ? "350px"
+                : "112px",
+            width: "224px",
+          }}
         />
       )}
 
@@ -33,7 +40,13 @@ function Article({ article }: Props) {
         <div className="flex flex-col">
           <h2 className="font-bold">{article.title}</h2>
 
-          <section className="mt-2 flex-1">
+          <section
+            className={`mt-2 flex-1 ${
+              article.image === "https://i.ibb.co/sCTJZ1B/1.png"
+                ? "line-clamp-6"
+                : null
+            }`}
+          >
             <FastTypewriter text={article.description} />
           </section>
 
