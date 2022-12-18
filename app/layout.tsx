@@ -17,7 +17,7 @@ export default function RootLayout({
         /> */}
       </head>
 
-      <body className="bg-[#C8BFB8] font-oldEnglish dark:bg-[#8a6f5a]">
+      <body className="bg-[#C8BFB8] font-oldEnglish transition-all duration-500 dark:bg-[#8a6f5a]">
         <Providers>
           <Header />
           <div className="mx-auto max-w-6xl">{children}</div>

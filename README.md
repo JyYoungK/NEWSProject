@@ -33,6 +33,11 @@ Demo URL: https://newsproject-nugmup3x5-jyyoungk.vercel.app/
 - Type `npm run build` in terminal.
 - Finally Type `vercel` again.
 
+### To update
+
+- Type `npm run build` in terminal.
+- Finally Type `vercel` again.
+
 ### Check if APIKey is working correctly
 
 - Open powershell and type `stepzen start`
@@ -102,3 +107,7 @@ All pages will be cached and stored for 60 seconds to load faster. After 60 seco
 17. Toggle Theme, I used `npm i next-themes`. Check out `Providers.tsx` for use. Must add `darkMode: "class",` inside `tailwind.config.js`
 
 18. Using NextJS, you must ADD the prefix `NEXT_PUBLIC_` to all of your environment variables.
+
+# Final Note
+
+There has been many challenges developing and deploying NextJS13. Many hydration error to look out for, avoid using <p> tag as much as possible. I had to use React version 18.2 with NextJS13 to avoid certain crashes. Lastly, using `import { useRouter } from "next/navigation";` caused switching from server to client component to fail when deployed. Overall, it was a tough journey but it allowed me to look up many documents and helped me learn to 'learn on my own' which I think it helped me to grow into a better programmer.

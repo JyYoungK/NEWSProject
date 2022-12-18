@@ -42,9 +42,7 @@ function Header() {
   return (
     <div>
       <hr className="my-4 h-1 border-0 bg-black dark:bg-[#3A160E]" />
-
       <div className="grid grid-cols-3 items-center p-2">
-        {/* <Bars3Icon className="h-8 w-8 cursor-pointer" /> */}
         <Weather />
         <div className="flex flex-col justify-center text-4xl md:flex-row lg:text-6xl">
           <div className=" mr-2 hidden text-gray-500 dark:text-[#743828] sm:block">

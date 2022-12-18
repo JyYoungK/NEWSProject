@@ -3,6 +3,7 @@
 import LiveTimeStamp from "./LiveTimestamp";
 import { useRouter } from "next/navigation";
 import FastTypewriter from "./Typewriter/FastTypewriter";
+
 type Props = {
   article: Article;
 };
