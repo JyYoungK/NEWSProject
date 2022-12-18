@@ -15,7 +15,7 @@ Demo URL: https://newsproject-nugmup3x5-jyyoungk.vercel.app/
 - React Router for navigation
 - Tailwind/MUI for Design and CSS
 
-### Generate Full Working Website
+### Generate Working Website on your localhost
 
 - Create `.env.local` file inside client
 - Fill in the followings
