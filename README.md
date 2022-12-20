@@ -35,8 +35,7 @@ Demo URL: https://newsproject-jyyoungk.vercel.app/
 
 ### To update
 
-- Type `npm run build` in terminal.
-- Finally Type `vercel` again.
+- Type `vercel` in terminal.
 
 ### Check if APIKey is working correctly
 
