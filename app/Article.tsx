@@ -1,32 +1,25 @@
+"use client";
+
 import LiveTimeStamp from "./LiveTimestamp";
 import { useRouter } from "next/navigation";
 import FastTypewriter from "./Typewriter/FastTypewriter";
-import ReadMoreButton from "./ReadMoreButton";
 
 type Props = {
   article: Article;
 };
 
 function Article({ article }: Props) {
-  // const router = useRouter();
-  // const handleClick = () => {
-  //   const queryString = Object.entries(article).map(([key, value]) => {
-  //     const stringValue = value !== null ? value : JSON.stringify(value);
-  //     return `${key}=${encodeURIComponent(stringValue)}`;
-  //   });
-  //   const url = `/article?${queryString}`;
-  //   router.push(url);
-  // };
-  // const handleClick = () => {
-  //   const queryString = Object.entries(article)
-  //     .map(([key, value]) => `${key}=${value}`)
-  //     .join("&");
-  //   const url = `/article?${queryString}`;
-  //   router.push(url);
-  // };
+  const router = useRouter();
+  const handleClick = () => {
+    const queryString = Object.entries(article)
+      .map(([key, value]) => `${key}=${value}`)
+      .join("&");
+    const url = `/article/article?${queryString}`;
+    router.push(url);
+  };
   return (
     <article
-      // onClick={handleClick}
+      onClick={handleClick}
       className="mt-5 flex h-full cursor-pointer flex-col font-serif text-black shadow-lg transition-all duration-200 ease-out hover:bg-slate-200 hover:shadow-xl dark:text-[#3A160E] dark:hover:bg-[#9b5e51] md:w-56 "
     >
       {article.image && (
@@ -58,7 +51,6 @@ function Article({ article }: Props) {
             </div>
           </footer>
         </div>
-        <ReadMoreButton article={article} />
       </div>
     </article>
   );
