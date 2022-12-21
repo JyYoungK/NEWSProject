@@ -24,8 +24,6 @@ function Weather() {
   const [weather, setWeather] = useState<WeatherData>();
 
   useEffect(() => {
-    // const fetchWeather = async () => {
-
     const fetchWeatherData = async () => {
       navigator.geolocation.getCurrentPosition(async function (position) {
         const data: WeatherData = await getFormattedWeatherData(
