@@ -2,7 +2,7 @@
 
 (Note: This website does not have the paid API key. Some components are limited)
 
-Demo URL: https://newsproject-jyyoungk.vercel.app/
+Demo URL: https://news-project-junyoung.vercel.app/
 
 ## Main Stack - M.E.R.N
 
@@ -35,7 +35,7 @@ Demo URL: https://newsproject-jyyoungk.vercel.app/
 
 ### To update
 
-- Type `vercel` in terminal.
+- Type `vercel` in terminal or make a commit to github
 
 ### Check if APIKey is working correctly
 
