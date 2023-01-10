@@ -17,8 +17,8 @@ function Header() {
       <hr className="my-4 h-1 border-0 bg-black dark:bg-[#3A160E]" />
       <div className="grid grid-cols-3 items-center p-2">
         <Weather />
-        <div className="flex flex-col justify-center text-4xl md:flex-row lg:text-6xl">
-          <div className=" mr-2 hidden text-gray-500 dark:text-[#743828] sm:block">
+        <div className="flex flex-col justify-center text-4xl md:flex-row xl:text-6xl">
+          <div className=" mr-2 hidden text-gray-500 dark:text-[#743828] lg:block">
             Old
           </div>
 
@@ -42,7 +42,7 @@ function Header() {
               <h1 className="text-center"> S</h1>
             </Link>
           </div>
-          <div className="ml-2 hidden text-gray-500 dark:text-[#743828] sm:block">
+          <div className="ml-2 hidden text-gray-500 dark:text-[#743828] lg:block">
             Paper
           </div>
         </div>
@@ -58,13 +58,13 @@ function Header() {
           </div>
         </div>
         <div className="flex justify-center font-mono text-sm font-bold md:text-lg">
-          <div className="hidden sm:block">
+          <div className="hidden xl:block">
             <NameOfDay />
           </div>
           <div className="mx-1 ">
             <DateInformation />
           </div>
-          <div className="hidden sm:block">
+          <div className="hidden xl:block">
             <CurrentTime />
           </div>
         </div>
