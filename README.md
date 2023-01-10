@@ -4,8 +4,6 @@
 
 Demo URL: https://news-project-junyoung.vercel.app/
 
-## Main Stack - M.E.R.N
-
 ### Frontend
 
 - React/NextJS13 as framework
